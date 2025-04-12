@@ -1,48 +1,100 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://images.unsplash.com/photo-1517519014922-8fc06aa5c3c9?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+img.profile {
+  width: 200px;              /* set size */
+  height: 200px;
+  border-radius: 50%;        /* make it round */
+  object-fit: cover;         /* crop inside circle */
+  border: 4px solid rgb(167, 42, 42);   /* white border */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* soft shadow */
+  margin-bottom: 20px;
+  transition: 0.3s ease;     /* smooth hover animation */
+}
+
+img.profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(250, 244, 244, 0.6);
+}
+
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #008ecc;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
   main {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
+    padding: 20px 10px;
   }
-  
-  h1, h2 {
-    margin-bottom: 20px;
+
+  img.profile {
+    width: 120px;
+    height: 120px;
   }
-  
+
   p {
-    margin-bottom: 15px;
+    font-size: 1em;
   }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-  }
-  
+}
+
