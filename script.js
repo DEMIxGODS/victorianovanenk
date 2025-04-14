@@ -26,6 +26,6 @@ function toggleMenu() {
   nav.classList.toggle("active");
 }
 function toggleMenu() {
-  const nav = document.getElementById("navLinks");
-  nav.classList.toggle("active");
+  const links = document.querySelector(".extra-links");
+  links.classList.toggle("active");
 }
