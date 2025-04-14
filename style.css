@@ -246,6 +246,7 @@ body.light-mode nav a:hover {
 #navLinks {
   transition: all 0.3s ease;
 }
+<<<<<<< HEAD
 /* Always show primary nav */
 .primary-nav {
   display: flex;
@@ -306,4 +307,78 @@ nav {
     display: block;
   }
 }
+=======
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(10, 10, 10, 0.6);
+  padding: 15px 20px;
+  position: relative;
+}
+
+.nav-title {
+  font-weight: bold;
+  color: white;
+  font-size: 1.2em;
+}
+
+.primary-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  left: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+  width: 200px;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu.active {
+  display: flex;
+}
+
+/* Optional: adjust for light mode */
+body.light-mode .dropdown-menu {
+  background: #fff;
+}
+
+body.light-mode .dropdown-menu a {
+  color: #333;
+}
+
+body.light-mode .dropdown-menu a:hover {
+  background: #eee;
+}
+
+>>>>>>> 7ee638c (Updated navbar layout and added new project pages)
 
