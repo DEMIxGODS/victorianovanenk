@@ -22,10 +22,6 @@ function toggleMode() {
   localStorage.setItem("theme", mode);
 }
 function toggleMenu() {
-  const nav = document.getElementById("navLinks");
-  nav.classList.toggle("active");
-}
-function toggleMenu() {
   const links = document.querySelector(".extra-links");
   links.classList.toggle("active");
 }
