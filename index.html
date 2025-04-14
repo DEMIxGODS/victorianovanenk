@@ -102,14 +102,20 @@
 <body>
 
   <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <h1>Hello, I'm Victoriano van Enk</h1>
-    <nav>
+    <nav id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="#">My Work</a>
+      <a href="#">Learning Process</a>
+      <a href="#">Website Builds</a>
+      <a href="#">Projects</a>
     </nav>
   </header>
-
+  
+  
   <main>
     <img src="pictures/profile.jpg" alt="Profile Photo" class="profile">
     <h2>Welcome to My Website</h2>
@@ -120,14 +126,14 @@
     
   </main>
 
-  <button onclick="toggleMode()" class="button">🌗 Toggle Light/Dark Mode</button>
+  <div style="text-align: center; margin-top: 30px;">
+    <button onclick="toggleMode()" class="button">🌗 Toggle Light/Dark Mode</button>
+  </div>
+  <script src="script.js"></script>
 
   <footer>
     <p>&copy; 2025 Victoriano van Enk. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
-
   
 </body>
 </html>
