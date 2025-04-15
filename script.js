@@ -22,13 +22,8 @@ function toggleMode() {
   localStorage.setItem("theme", mode);
 }
 function toggleMenu() {
-<<<<<<< HEAD
-  const links = document.querySelector(".extra-links");
-  links.classList.toggle("active");
-=======
   const menu = document.getElementById("dropdownMenu");
   menu.classList.toggle("active");
->>>>>>> 7ee638c (Updated navbar layout and added new project pages)
 }
 document.addEventListener("click", function (e) {
   const menu = document.getElementById("dropdownMenu");
