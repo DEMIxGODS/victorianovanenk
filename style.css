@@ -68,37 +68,37 @@ nav a:hover {
 
 /* Dropdown menu styles */
 .dropdown-menu {
-  position: absolute;
-  top: 60px;
-  left: 0; /* Align to the left */
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  padding: 10px 0;
-  display: none;
-  flex-direction: column;
-  width: 200px;
-  z-index: 999;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0;
-  transform: translateY(-10px);
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50px; /* Adjust depending on your header height */
+    left: 0; /* Align to the left */
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    width: 200px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
-.dropdown-menu.active {
-  display: flex;
-  opacity: 1;
-  transform: translateY(0);
+.dropdown-menu.show {
+    display: flex; /* Show the menu */
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .dropdown-menu a {
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .dropdown-menu a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+    background-color: #444;
 }
 
 /* Main content styles */
@@ -580,6 +580,14 @@ body.light-mode .dropdown-menu a:hover {
   text-align: center;
   color: white;
   font-weight: bold;
+}
+.hamburger {
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 

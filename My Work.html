@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work</title>
+    <link rel="stylesheet" href="style.css"> <!-- Use a shared CSS file for consistency -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            if (menu) {
+                menu.classList.toggle('show'); // Toggle the 'show' class to display or hide the menu
+            } else {
+                console.error("Dropdown menu element not found!");
+            }
+        }
+    </script>
+    <style>
+        /* Header and Navbar Styles */
+        header {
+            background-color: #555; /* Match the header background color */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between; /* Align items to the left */
+            align-items: center;
+            position: relative;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            margin-left: 20px; /* Add spacing between the dropdown and title */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center; /* Center the links */
+            align-items: center;
+            gap: 15px; /* Add spacing between items */
+            flex-grow: 1; /* Allow nav to take up space */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hamburger {
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 20px;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown-menu {
+            display: none; /* Initially hidden */
+            position: absolute;
+            top: 100%; /* Position below the navbar */
+            left: 0; /* Align to the left */
+            background-color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .dropdown-menu.show {
+            display: block; /* Show the menu when the 'show' class is added */
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #444;
+        }
+
+        /* Gallery Layout */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 20px; /* Spacing between items */
+            justify-items: center; /* Center items horizontally */
+            margin-top: 20px;
+        }
+
+        .gallery img, .gallery video {
+            max-width: 100%; /* Ensure images and videos fit within their grid cells */
+            border-radius: 8px; /* Optional: Add rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="left-section">
+          <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
+      
+        <nav class="primary-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="Learning Process.html">Learning Process</a>
+          <a href="My Work.html">My Work</a>
+          <a href="Website Builds.html">Website Builds</a>
+          <a href="Projects.html">Projects</a>
+        </div>
+      </header>
+      
+
+    <section>
+        <h2>Photos</h2>
+        <div class="gallery">
+            <img src="photo1.jpg" alt="Photo 1">
+            <img src="photo2.jpg" alt="Photo 2">
+            <!-- Add more photos here -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Videos</h2>
+        <div class="gallery">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Add more videos here -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Links</h2>
+        <div class="links">
+            <a href="https://www.skikk.eu/nl" target="_blank">https://www.skikk.eu/nl</a>
+            <a href="https://anotherexample.com" target="_blank">Another Example</a>
+            <!-- Add more links here -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Upload Photos or Videos</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="fileUpload">Choose a file:</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept="image/*,video/*">
+            <button type="submit" class="button">Upload</button>
+        </form>
+    </section>
+</body>
+</html>
