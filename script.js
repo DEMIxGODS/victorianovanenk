@@ -5,7 +5,6 @@ function toggleMode() {
   console.log("JavaScript is working!");
 
   console.log("✅ JavaScript is working, Victoriano!");
-alert("Hello, Victoriano! This message is from your script.js file 😄");
 // Check saved mode
 window.onload = function () {
   const savedMode = localStorage.getItem("theme");
