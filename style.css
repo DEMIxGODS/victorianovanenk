@@ -25,7 +25,43 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(10, 10, 10, 0.6);
-  padding: 20px;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+  margin-left: 20px; /* Add spacing between the dropdown and title */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hamburger {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+}
+
+.primary-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.primary-nav a:hover {
+  text-decoration: underline;
 }
 
 header {
@@ -57,7 +93,7 @@ nav a:hover {
 }
 
 .primary-nav a {
-  color: #f1ebeb;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
@@ -67,38 +103,42 @@ nav a:hover {
 }
 
 /* Dropdown menu styles */
-.dropdown-menu {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 50px; /* Adjust depending on your header height */
-    left: 0; /* Align to the left */
-    background-color: #333;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 10px 0;
-    width: 200px;
-    z-index: 1000;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    transform: translateY(-10px);
+.dropdown-menu,
+#dropdownMenu {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  background-color: #222;
+  padding: 10px;
+  border-radius: 8px;
+  position: absolute;
+  top: 100%; /* Position below the navbar */
+  left: 0; /* Align to the left */
+  width: auto; /* Adjust width as needed */
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
-.dropdown-menu.show {
-    display: flex; /* Show the menu */
-    flex-direction: column;
-    opacity: 1;
-    transform: translateY(0);
+.dropdown-menu.active,
+#dropdownMenu.active {
+  display: flex; /* Show dropdown menu when active */
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.dropdown-menu a {
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
+.dropdown-menu a,
+#dropdownMenu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
 }
 
-.dropdown-menu a:hover {
-    background-color: #444;
+.dropdown-menu a:hover,
+#dropdownMenu a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Main content styles */
@@ -396,6 +436,66 @@ nav {
   }
 }
 
+.nav-title {
+  font-weight: bold;
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .primary-nav {
+    display: none; /* Hide navigation links on smaller screens */
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    z-index: 1000;
+  }
+
+  .primary-nav.active {
+    display: flex; /* Show navigation links when active */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu on smaller screens */
+  }
+}
+
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 8px;
+  position: absolute;
+  top: 100%; /* Position below the navbar */
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.dropdown-menu.active {
+  display: flex; /* Show dropdown menu when active */
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.dropdown-menu a:hover {
+  text-decoration: underline;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -417,12 +517,6 @@ nav {
   border: none;
   color: white;
   margin-right: 15px;
-}
-
-.nav-title {
-  font-weight: bold;
-  color: white;
-  font-size: 1.2em;
 }
 
 .primary-nav a {
