@@ -16,92 +16,9 @@
         }
     </script>
     <style>
-        /* Header and Navbar Styles */
-        header {
-            background-color: #555; /* Match the header background color */
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between; /* Align items to the left */
-            align-items: center;
-            position: relative;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 24px;
-            margin-left: 20px; /* Add spacing between the dropdown and title */
-        }
-
-        nav {
-            display: flex;
-            justify-content: center; /* Center the links */
-            align-items: center;
-            gap: 15px; /* Add spacing between items */
-            flex-grow: 1; /* Allow nav to take up space */
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .hamburger {
-            cursor: pointer;
-            background: none;
-            border: none;
-            font-size: 20px;
-        }
-
-        /* Dropdown Menu Styles */
-        .dropdown-menu {
-            display: none; /* Initially hidden */
-            position: absolute;
-            top: 100%; /* Position below the navbar */
-            left: 0; /* Align to the left */
-            background-color: #333;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            z-index: 1000;
-        }
-
-        .dropdown-menu.show {
-            display: block; /* Show the menu when the 'show' class is added */
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 5px 10px;
-            text-decoration: none;
-            color: white;
-        }
-
-        .dropdown-menu a:hover {
-            background-color: #444;
-        }
-
-        /* Gallery Layout */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-            gap: 20px; /* Spacing between items */
-            justify-items: center; /* Center items horizontally */
-            margin-top: 20px;
-        }
-
-        .gallery img, .gallery video {
-            max-width: 100%; /* Ensure images and videos fit within their grid cells */
-            border-radius: 8px; /* Optional: Add rounded corners */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-        }
-
         h2 {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 48px;
         }
     </style>
 </head>
@@ -109,6 +26,12 @@
     <header class="navbar">
         <div class="left-section">
           <button class="hamburger" onclick="toggleMenu()">☰</button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="Learning Process.html">Learning Process</a>
+            <a href="My Work.html">My Work</a>
+            <a href="Website Builds.html">Website Builds</a>
+            <a href="Projects.html">Projects</a>
+          </div>
         </div>
       
         <nav class="primary-nav">
@@ -116,13 +39,6 @@
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </nav>
-      
-        <div class="dropdown-menu" id="dropdownMenu">
-          <a href="Learning Process.html">Learning Process</a>
-          <a href="My Work.html">My Work</a>
-          <a href="Website Builds.html">Website Builds</a>
-          <a href="Projects.html">Projects</a>
-        </div>
       </header>
       
 

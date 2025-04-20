@@ -8,20 +8,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Learning Process</h1>
-    <nav>
+  <header class="navbar">
+    <div class="left-section">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="Learning Process.html">Learning Process</a>
+        <a href="My Work.html">My Work</a>
+        <a href="Website Builds.html">Website Builds</a>
+        <a href="Projects.html">Projects</a>
+      </div>
+    </div>
+    
+    <nav class="primary-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
     </nav>
-    <div class="dropdown-menu" id="dropdownMenu">
-      <a href="My Work.html">My Work</a> <!-- Ensure this link is correct -->
-      <a href="Learning Process.html">Learning Process</a> <!-- Updated link -->
-      <a href="#website-builds">Website Builds</a>
-      <a href="#projects">Projects</a>
-    </div>
   </header>
 
   <main>
