@@ -54,3 +54,10 @@ hamburger.addEventListener('click', () => {
   document.body.classList.toggle('menu-open');
   mobileMenu.classList.toggle('active');
 });
+const overlay = document.querySelector('.overlay');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+  overlay.classList.toggle('active');
+  document.body.classList.toggle('menu-open');
+});

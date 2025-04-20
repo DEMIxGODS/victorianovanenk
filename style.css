@@ -348,3 +348,17 @@ body.light-mode .dropdown-menu a:hover {
 body.menu-open {
   overflow: hidden;
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
