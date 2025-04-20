@@ -376,3 +376,32 @@ body.menu-open {
     display: none; /* Only show this on mobile */
   }
 }
+/* Ensure top links are visible always */
+.top-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* DROPDOWN shared across desktop and mobile */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+/* Toggle visible when active */
+.dropdown-menu.active {
+  display: flex;
+}
+
+/* Optional: hide overlay scroll */
+body.menu-open {
+  overflow: hidden;
+}

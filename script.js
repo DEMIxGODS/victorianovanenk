@@ -61,3 +61,8 @@ hamburger.addEventListener('click', () => {
   overlay.classList.toggle('active');
   document.body.classList.toggle('menu-open');
 });
+function toggleMenu() {
+  document.getElementById("dropdownMenu").classList.toggle("active");
+  document.getElementById("overlay").classList.toggle("active");
+  document.body.classList.toggle("menu-open");
+}

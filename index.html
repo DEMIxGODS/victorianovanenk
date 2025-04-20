@@ -10,8 +10,10 @@
 <body>
   <header class="navbar">
     <div class="left-section">
-      <div class="overlay"></div>
+      <div class="overlay" id="overlay"></div>
       <button class="hamburger" onclick="toggleMenu()">☰</button>
+      
+      <!-- DROPDOWN MENU (same for desktop & mobile) -->
       <div class="dropdown-menu" id="dropdownMenu">
         <a href="Learning Process.html">Learning Process</a>
         <a href="My Work.html">My Work</a>
@@ -19,19 +21,15 @@
         <a href="Projects.html">Projects</a>
       </div>
     </div>
-     <!-- Inside your header -->
-     <div class="mobile-menu">
-      <a href="index.html" class="desktop-only">Home</a>
-      <a href="about.html" class="desktop-only">About</a>
-      <a href="contact.html" class="desktop-only">Contact</a>
-
-    
-    <nav class="primary-nav">
+  
+    <!-- TOP NAV LINKS (shown always) -->
+    <div class="top-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-    </nav>
+    </div>
   </header>
+  
 
   <main>
     <img src="pictures/profile.jpg" alt="Profile Photo" class="profile">
