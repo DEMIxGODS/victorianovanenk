@@ -235,7 +235,7 @@ body.light-mode .dropdown-menu a:hover {
           max-width: 100%; /* Ensure images and videos fit within their grid cells */
           border-radius: 8px; /* Optional: Add rounded corners */
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-      }\
+      }
       
         h2 {
             text-align: center;
