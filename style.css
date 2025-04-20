@@ -319,3 +319,24 @@ body.light-mode .dropdown-menu a:hover {
           justify-content: center;
           gap: 10px;
         }
+        body.menu-open {
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .mobile-menu {
+    width: 80%;
+    margin-right: 10%;
+  }
+
+  .main-content {
+    padding-top: 100px; /* Push content lower when menu opens */
+  }
+}
+body.menu-open {
+  margin-top: 150px; /* Increase if needed */
+}
