@@ -319,24 +319,32 @@ body.light-mode .dropdown-menu a:hover {
           justify-content: center;
           gap: 10px;
         }
-        body.menu-open {
-  overflow: hidden;
+/* Base styles for the mobile menu */
+.mobile-menu {
+  position: absolute;
+  top: 60px; /* Adjust based on your header height */
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  border-radius: 10px;
+  padding: 10px;
+  display: none; /* Hidden by default */
+}
+
+/* Show the menu when active */
+.mobile-menu.active {
+  display: block;
 }
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .mobile-menu {
-    width: 80%;
-    margin-right: 10%;
+    align-items: flex-start;
   }
 
   .main-content {
-    padding-top: 100px; /* Push content lower when menu opens */
+    padding-top: 100px; /* Ensure content isn't hidden behind the menu */
   }
 }
 body.menu-open {
-  margin-top: 150px; /* Increase if needed */
+  overflow: hidden;
 }

@@ -44,3 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelector('.hamburger').addEventListener('click', function () {
   document.body.classList.toggle('menu-open');
 });
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+});
+hamburger.addEventListener('click', () => {
+  document.body.classList.toggle('menu-open');
+  mobileMenu.classList.toggle('active');
+});
