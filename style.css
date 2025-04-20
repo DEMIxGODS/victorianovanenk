@@ -363,3 +363,16 @@ body.menu-open {
   padding: 10px;
   flex-wrap: wrap;
 }
+.top-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+@media (min-width: 769px) {
+  .top-links {
+    display: none; /* Only show this on mobile */
+  }
+}
