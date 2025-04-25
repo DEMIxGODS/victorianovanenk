@@ -1,6 +1,6 @@
 # 🌐 Victoriano van Enk – Personal Portfolio
 
-Hi! I’m Victoriano, a creative developer and designer passionate about building clean, modern, and responsive websites.
+Hi! I’m Victoriano, build for fun.
 
 ## 🔗 Live Site
 [Visit Website](https://demixgods.github.io/victorianovanenk/)

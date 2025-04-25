@@ -23,25 +23,27 @@
     </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="left-section">
-            <div class="overlay"></div>
-          <button class="hamburger" onclick="toggleMenu()">☰</button>
-          <div class="dropdown-menu" id="dropdownMenu">
-            <a href="Learning Process.html">Learning Process</a>
-            <a href="My Work.html">My Work</a>
-            <a href="Website Builds.html">Website Builds</a>
-            <a href="Projects.html">Projects</a>
-          </div>
-        </div>
-      
-        <nav class="primary-nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </header>
-      
+    <!-- Overlay -->
+<div id="overlay" onclick="closeSidebar()"></div>
+
+<!-- Sidebar -->
+<div id="sidebar">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="Learning Process.html">Learning Process</a>
+    <a href="My Work.html">My Work</a>
+    <a href="#">Website Builds</a>
+    <a href="#">Projects</a>
+  </nav>
+</div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <button class="hamburger" onclick="openSidebar()">☰</button>
+  <h1>Victoriano van Enk</h1>
+</header>
 
     <section>
         <h2>Photos</h2>

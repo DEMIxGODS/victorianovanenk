@@ -8,29 +8,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="left-section">
-      <div class="overlay" id="overlay"></div>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      
-      <!-- DROPDOWN MENU (same for desktop & mobile) -->
-      <div class="dropdown-menu" id="dropdownMenu">
-        <a href="Learning Process.html">Learning Process</a>
-        <a href="My Work.html">My Work</a>
-        <a href="Website Builds.html">Website Builds</a>
-        <a href="Projects.html">Projects</a>
-      </div>
-    </div>
-  
-    <!-- TOP NAV LINKS (shown always) -->
-    <div class="top-links">
+  <!-- Overlay -->
+  <div id="overlay" onclick="closeSidebar()"></div>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-    </div>
-  </header>
-  
+      <a href="Learning Process.html">Learning Process</a>
+      <a href="My Work.html">My Work</a>
+      <a href="#">Website Builds</a>
+      <a href="#">Projects</a>
+    </nav>
+  </div>
 
+  <!-- Navbar -->
+  <header class="navbar">
+    <button class="hamburger" onclick="openSidebar()">☰</button>
+    <h1>Victoriano van Enk</h1>
+  </header>
+
+  <!-- Main Content -->
   <main>
     <img src="pictures/profile.jpg" alt="Profile Photo" class="profile">
     <h2>Welcome to My Website</h2>
@@ -38,15 +38,16 @@
     <a href="about.html" class="button">Learn More About Me</a>
   </main>
 
-  <div style="text-align: center; margin-top: 30px;">
-    <button onclick="toggleMode()" class="button">🌗 Toggle Light/Dark Mode</button>
-  </div>
-  
+  <script>
+    function openSidebar() {
+      document.getElementById('sidebar').classList.add('active');
+      document.getElementById('overlay').classList.add('active');
+    }
 
-  <script src="script.js"></script>
-
-  <footer>
-    <p>&copy; 2025 Victoriano van Enk. All rights reserved.</p>
-  </footer>
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('active');
+      document.getElementById('overlay').classList.remove('active');
+    }
+  </script>
 </body>
 </html>

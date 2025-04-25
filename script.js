@@ -1,3 +1,15 @@
+function openSidebar() {
+  document.getElementById("sidebar").classList.add("active");
+  document.getElementById("overlay").classList.add("active");
+}
+
+function closeSidebar() {
+  document.getElementById("sidebar").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
+}
+document.querySelector('.hamburger').addEventListener('click', function () {
+  document.body.classList.toggle('menu-open');
+});
 // Toggle light/dark mode
 function toggleMode() {
   document.body.classList.toggle("light-mode");
@@ -15,54 +27,13 @@ window.onload = function () {
   }
 };
 
-// Toggle the dropdown menu
-function toggleMenu() {
-  const menu = document.getElementById("dropdownMenu");
-  menu.classList.toggle("active");
+// Sidebar menu functionality
+function openSidebar() {
+  document.getElementById("sidebar").classList.add("active");
+  document.getElementById("overlay").classList.add("active");
 }
 
-// Close the dropdown menu when clicking outside
-document.addEventListener("click", function (e) {
-  const menu = document.getElementById("dropdownMenu");
-  const hamburger = document.querySelector(".hamburger");
-
-  // Close the menu if the click is outside the menu and hamburger
-  if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-    menu.classList.remove("active");
-  }
-});
-
-// Toggle menu on hamburger click
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".primary-nav");
-
-  hamburger.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-});
-document.querySelector('.hamburger').addEventListener('click', function () {
-  document.body.classList.toggle('menu-open');
-});
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
-
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-});
-hamburger.addEventListener('click', () => {
-  document.body.classList.toggle('menu-open');
-  mobileMenu.classList.toggle('active');
-});
-const overlay = document.querySelector('.overlay');
-
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-  overlay.classList.toggle('active');
-  document.body.classList.toggle('menu-open');
-});
-function toggleMenu() {
-  document.getElementById("dropdownMenu").classList.toggle("active");
-  document.getElementById("overlay").classList.toggle("active");
-  document.body.classList.toggle("menu-open");
+function closeSidebar() {
+  document.getElementById("sidebar").classList.remove("active");
+  document.getElementById("overlay").classList.remove("active");
 }
