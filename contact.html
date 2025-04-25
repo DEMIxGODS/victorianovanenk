@@ -31,12 +31,32 @@
 </header>
 
   <main>
-    <h2>Get in Touch</h2>
-    <p>You can email me at <strong>victorianovanenk@outlook.com</strong> or find me on social media.</p>
-    <a href="https://github.com/DEMIxGODS" target="_blank" class="button">💻 GitHub</a>
-    <a href="https://nl.linkedin.com/in/victoriano-van-enk-2833582b5?original_referer=https%3A%2F%2Fwww.linkedin.com%2F/" target="_blank" class="button">🔗 LinkedIn</a>
-    <a href="https://instagram.com/yourprofile" target="_blank" class="button">📸 Instagram</a>
-    <a href="CV/cv.pdf" target="_blank" class="button">📄 View My CV</a>
+    <section class="contact-section">
+      <h2>Get in Touch</h2>
+      <p>You can email me at <a href="mailto:victorianovanenk@outlook.com">victorianovanenk@outlook.com</a> or use the form below to send me a message.</p>
+      
+      <!-- Social Media Buttons -->
+      <div class="social-buttons">
+        <a href="https://github.com/DEMIxGODS" target="_blank" class="button">💻 GitHub</a>
+        <a href="https://nl.linkedin.com/in/victoriano-van-enk-2833582b5?original_referer=https%3A%2F%2Fwww.linkedin.com%2F/" target="_blank" class="button">🔗 LinkedIn</a>
+        <a href="https://instagram.com/yourprofile" target="_blank" class="button">📸 Instagram</a>
+        <a href="CV/cv.pdf" target="_blank" class="button">📄 View My CV</a>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+
+        <button type="submit" class="button">SEND MESSAGE ➤</button>
+      </form>
+    </section>
   </main>
   
   <script src="script.js"></script>

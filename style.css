@@ -51,7 +51,7 @@ body {
   padding-top: 60px;
   transition: left 0.3s ease;
   z-index: 10;
-  border-right: 3px solid red;
+  border-right: 3px solid rgb(138, 138, 138);
 }
 #sidebar.active {
   left: 0;
@@ -207,4 +207,90 @@ ul li::before {
   color: #00aaff;
   font-size: 1.5rem;
   margin-right: 10px;
+}
+
+/* Contact Me Section */
+.contact-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1a1a1a; /* Match the background color */
+  color: #f4f4f4;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #00aaff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.contact-section a.button {
+  display: inline-block;
+  margin: 10px 10px; /* Add spacing between buttons */
+  text-align: center;
+}
+
+.contact-section a.button:hover {
+  transform: scale(1.1); /* Slight hover effect */
+}
+
+.social-buttons {
+  margin-bottom: 30px; /* Add spacing below the buttons */
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto; /* Center the form */
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00aaff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+}
+
+.contact-form button {
+  background: linear-gradient(90deg, #00aaff, #008cff);
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(90deg, #008cff, #005fa3);
+  transform: scale(1.05);
 }
