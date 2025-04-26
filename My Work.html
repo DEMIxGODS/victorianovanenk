@@ -28,63 +28,68 @@
 
 <!-- Sidebar -->
 <div id="sidebar">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="Learning Process.html">Learning Process</a>
-    <a href="My Work.html">My Work</a>
-    <a href="#">Website Builds</a>
-    <a href="#">Projects</a>
-  </nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="Learning Process.html">Learning Process</a>
+        <a href="My Work.html">My Work</a>
+        <a href="#">Website Builds</a>
+        <a href="#">Projects</a>
+    </nav>
 </div>
 
 <!-- Navbar -->
 <header class="navbar">
-  <button class="hamburger" onclick="openSidebar()">☰</button>
-  <h1>Victoriano van Enk</h1>
+    <button class="hamburger" onclick="openSidebar()">☰</button>
+    <h1>Victoriano van Enk</h1>
 </header>
 
-    <section>
-        <h2>Photos</h2>
-        <div class="gallery">
-            <img src="photo1.jpg" alt="Photo 1">
-            <img src="photo2.jpg" alt="Photo 2">
-            <!-- Add more photos here -->
-        </div>
-    </section>
+<section>
+    <h2>Photos</h2>
+    <div class="gallery">
+        <img src="Video and pictures/photo1.jpg" alt="Photo 1">
+        <img src="Video and pictures/photo2.jpg" alt="Photo 2">
+        <img src="Video and pictures/photo3.jpg" alt="Photo 3">
+        <!-- Add more photos here -->
+    </div>
+</section>
 
-    <section>
-        <h2>Videos</h2>
-        <div class="gallery">
-            <video controls>
-                <source src="video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video controls>
-                <source src="video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- Add more videos here -->
-        </div>
-    </section>
+<section>
+    <h2>Videos</h2>
+    <div class="gallery">
+        <video controls>
+            <source src="Video and pictures/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="Video and pictures/video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="Video and pictures/video3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Add more videos here -->
+    </div>
+</section>
 
-    <section>
-        <h2>Links</h2>
-        <div class="links">
-            <a href="https://www.skikk.eu/nl" target="_blank">https://www.skikk.eu/nl</a>
-            <a href="https://anotherexample.com" target="_blank">Another Example</a>
-            <!-- Add more links here -->
-        </div>
-    </section>
+<section>
+    <h2>Links</h2>
+    <div class="links">
+        <a href="https://www.skikk.eu/nl" target="_blank">https://www.skikk.eu/nl</a>
+        <a href="https://anotherexample.com" target="_blank">Another Example</a>
+        <!-- Add more links here -->
+    </div>
+</section>
 
-    <section>
-        <h2>Upload Photos or Videos</h2>
-        <form action="#" method="post" enctype="multipart/form-data">
-            <label for="fileUpload">Choose a file:</label>
-            <input type="file" id="fileUpload" name="fileUpload" accept="image/*,video/*">
-            <button type="submit" class="button">Upload</button>
-        </form>
-    </section>
+<section>
+    <h2>Upload Photos or Videos</h2>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="fileUpload">Choose a file:</label>
+        <input type="file" id="fileUpload" name="fileUpload" accept="image/*,video/*">
+        <button type="submit" class="button">Upload</button>
+    </form>
+</section>
 </body>
 </html>

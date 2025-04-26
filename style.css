@@ -47,11 +47,11 @@ body {
   left: -250px;
   width: 250px;
   height: 100%;
-  background-color: #7c7b7b;
-  padding-top: 60px;
+  background: #1a1a1a;
+  color: white;
   transition: left 0.3s ease;
-  z-index: 10;
-  border-right: 3px solid rgb(138, 138, 138);
+  z-index: 1000;
+  padding: 20px;
 }
 #sidebar.active {
   left: 0;
@@ -83,15 +83,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
 }
 #overlay.active {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 /* MAIN */
@@ -294,3 +291,217 @@ ul li::before {
   background: linear-gradient(90deg, #008cff, #005fa3);
   transform: scale(1.05);
 }
+
+/* Progress Bar */
+.progress-bar {
+  background-color: #444; /* Dark background for the bar */
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+  height: 20px;
+  width: 100%; /* Full width */
+}
+
+.progress-bar .progress {
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  line-height: 20px; /* Center text vertically */
+  transition: width 0.5s ease; /* Smooth animation */
+}
+
+#html .progress {
+  background: #e34c26; /* HTML origin color */
+}
+
+#css .progress {
+  background: #264de4; /* CSS origin color */
+}
+
+#javascript .progress {
+  background: #f7df1e; /* JavaScript origin color */
+  color: black; /* Adjust text color for better contrast */
+}
+
+#python .progress {
+  background: #306998; /* Python origin color */
+}
+
+#other .progress {
+  background: #6c757d; /* Neutral color for other technologies */
+}
+
+/* Learning Section */
+.learning-section {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.learning-item {
+  display: flex;
+  align-items: center;
+  background: #1a1a1a; /* Dark background for the section */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+}
+
+.tech-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px; /* Increase width for larger logos */
+  height: 120px; /* Increase height for larger logos */
+  margin-right: 20px;
+}
+
+.tech-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure the logo fits within the container */
+  font-size: 3rem; /* Increase the size of the icons */
+  color: inherit; /* Ensure the color matches the section */
+}
+
+.learning-content {
+  flex: 1;
+}
+
+.learning-content h2 {
+  font-size: 1.5rem;
+  color: #00aaff; /* Bright blue for headings */
+  margin-bottom: 5px;
+}
+
+.learning-content p {
+  font-size: 1rem;
+  color: #ddd; /* Light gray for text */
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background-color: #e0e0e0; /* Light gray background for the bar */
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+  width: 100%;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease; /* Smooth animation */
+}
+
+#html .progress {
+  background: #e34c26; /* HTML origin color */
+}
+
+#css .progress {
+  background: #264de4; /* CSS origin color */
+}
+
+#javascript .progress {
+  background: #f7df1e; /* JavaScript origin color */
+  color: black; /* Adjust text color for better contrast */
+}
+
+#python .progress {
+  background: #306998; /* Python origin color */
+}
+
+#other .progress {
+  background: #6c757d; /* Neutral color for other technologies */
+}
+
+/* General Section Styling */
+section {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: #f4f4f4;
+}
+
+section h2 {
+  text-align: center;
+  color: #00aaff;
+  margin-bottom: 20px;
+}
+
+/* Gallery Styling */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.gallery img,
+.gallery video {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Links Section */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a {
+  color: #00aaff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Upload Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+form label {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+form input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  color: #333;
+}
+
+form button {
+  background: linear-gradient(90deg, #00aaff, #008cff);
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: linear-gradient(90deg, #008cff, #005fa3);
+  transform: scale(1.05);
+}
+
